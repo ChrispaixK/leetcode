@@ -1,3 +1,7 @@
+body {
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
 .hola {
     font-family:monospace;
     display: flex;
@@ -5,8 +9,6 @@
     align-items:center;
     justify-content: center;
     align-content: center;
-    background: rgb(238,174,202);
-    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
 }
 
 .hola h1 {

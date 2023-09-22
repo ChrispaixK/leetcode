@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('images/back.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    height: 150px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo img {
+    width: 200px;
+}
+
+.profile {
+    position: relative;
+    border: 2px solid rgb(250, 198, 66);
+    border-radius: 35px;
+    display: flex;
+}
+
+#profile-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 67vh;
+}
+
+.number {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+p {
+    font-size: 18px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    position:fixed ;
+    bottom: 0;
+    background: linear-gradient(to bottom, #ffffff, #ffd1175a);
+    width: 100%;
+}
+
+
+@media screen and (max-width: 768px) {
+    header {
+        padding: 10px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .logo img {
+        width: 150px;
+        margin-bottom: 10px;
+    }
+}

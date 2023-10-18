@@ -1,23 +1,25 @@
-## Rotate Array to the Right
+# Pseudo-Code for Array Rotation
 
-**Input:**
-- `nums`: An array of integers.
-- `k`: The number of steps to rotate the array to the right.
+## Objective
+The goal of this algorithm is to rotate the elements of an array to the right by a given number of positions `k`.
 
-**Output:**
-- The array `nums` after being rotated to the right by `k` steps.
+## Inputs
+- `nums`: An array of elements to be rotated.
+- `k`: The number of positions to rotate to the right.
 
-**Pseudocode:**
+## Output
+- The input array `nums` is modified in place, with its elements rotated by `k` positions.
 
-1. Initialize a variable `k` to the remainder of `k` divided by the length of the array to handle cases where `k` is larger than the array size.
+## Pseudo-Code
+1. Calculate the length of the input array `n`.
+2. Modify `k` by taking its modulo with `n` to ensure `k` is within the valid range.
+3. Create a new array `result` to store the rotated elements.
+4. Iterate through the elements of the input array `nums`:
+   - Calculate the new index for the element as `(i + k) % n`, where `i` is the current index.
+   - Place the element at the new index in the `result` array.
+5. Iterate through the `result` array:
+   - Copy each element from the `result` array back to the original `nums` array.
+6. The `nums` array now contains the elements rotated by `k` positions.
 
-2. Initialize a new array called `result` with the same length as the input `nums`.
-
-3. Loop through the elements of the `nums` array using a variable `i`:
-   a. Calculate the new index for the element as `(i + k) % n`, where `n` is the length of the array.
-   b. Assign the value at `nums[i]` to `result` at the calculated index.
-
-4. Loop through the `result` array:
-   a. Copy the values from `result` back to `nums`.
-
-5. The `nums` array now contains the elements rotated to the right by `k` steps. The new length of the modified `nums` array is `n`.
+## Time Complexity
+The time complexity of this algorithm is O(n), where n is the length of the input array `nums`. It needs to visit every element in the array at least once to perform the rotation.

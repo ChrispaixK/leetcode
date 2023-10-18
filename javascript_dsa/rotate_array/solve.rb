@@ -1,9 +1,11 @@
-function rotateArray(nums, k) {
-  k = k % nums.length; // To handle cases where k is larger than the array length
-  if (k === 0) return nums; // No rotation needed
+def rotate(nums, k)
+     n = nums.length
+  k = k % n  # In case k is larger than the array size
+  result = Array.new(n)
+  
+  (0...n).each do |i|
+    result[(i + k) % n] = nums[i]
+  end
 
-  const firstPart = nums.slice(-k); // Get the last k elements
-  const secondPart = nums.slice(0, nums.length - k); // Get the first (n-k) elements
-
-  return firstPart.concat(secondPart);
-}
+  result.each_with_index { |val, i| nums[i] = val }
+end
